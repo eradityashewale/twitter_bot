@@ -27,6 +27,10 @@ try:
         EC.element_to_be_clickable((By.XPATH, "//button[@class='css-175oi2r r-sdzlij r-1phboty r-rs99b7 r-lrvibr r-2yi16 r-1qi8awa r-3pj75a r-1loqt21 r-o7ynqc r-6416eg r-1ny4l3l']"))
     )
     close.click()
+    login = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.XPATH, "//a[@href='/login']"))
+    )
+    login.click()
 except Exception as e:
     print(f"Error occurred: {e}")
 
